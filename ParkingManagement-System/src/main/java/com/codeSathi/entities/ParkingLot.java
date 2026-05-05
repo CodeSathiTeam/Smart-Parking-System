@@ -42,4 +42,5 @@ public class ParkingLot {
 
 //	 @OneToMany(mappedBy = "parkingLot", cascade = CascadeType.ALL)
 //	    private List<Slot> slots;
+	
 }
