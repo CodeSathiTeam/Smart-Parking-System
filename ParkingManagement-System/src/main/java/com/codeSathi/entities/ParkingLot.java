@@ -25,21 +25,21 @@ import lombok.ToString;
 @ToString
 @Builder
 public class ParkingLot {
-	
+
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Long id;
-	
+
 	@ManyToOne(fetch = FetchType.LAZY)
 	@JoinColumn(name = "owner_id", nullable = false)
 	private User owner;
-	
+
 	@Column(nullable = false)
 	private String location;
-	
+
 	@Column(nullable = false)
 	private Integer totalSlots;
-	
+
 //	 @OneToMany(mappedBy = "parkingLot", cascade = CascadeType.ALL)
 //	    private List<Slot> slots;
 }
