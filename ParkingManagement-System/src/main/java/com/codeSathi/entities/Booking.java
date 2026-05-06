@@ -10,6 +10,7 @@ import jakarta.persistence.FetchType;
 import jakarta.persistence.GeneratedValue;
 import jakarta.persistence.GenerationType;
 import jakarta.persistence.Id;
+import jakarta.persistence.JoinColumn;
 import jakarta.persistence.ManyToOne;
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -33,11 +34,11 @@ public class Booking {
 	private Long id;
 	
 	@ManyToOne(fetch = FetchType.LAZY)
-	@Column(name = "user_id", nullable = false)
+	@JoinColumn(name = "user_id", nullable = false)
 	private User user;
 	
 	@ManyToOne(fetch = FetchType.LAZY)
-	@Column(name = "slot_id", nullable = false)
+	@JoinColumn(name = "slot_id", nullable = false)
 	private Slot slot;
 	
 	@Column(nullable = false)
