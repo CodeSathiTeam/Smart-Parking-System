@@ -47,7 +47,7 @@ public class User {
 	@OneToMany(mappedBy = "owner", cascade = CascadeType.ALL)
 	private List<ParkingLot> parkingLot;
 
-//	 @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
-//	 private List<Booking> bookings;
+	 @OneToMany(mappedBy = "user", cascade = CascadeType.ALL)
+	 private List<Booking> bookings;
 
 }
